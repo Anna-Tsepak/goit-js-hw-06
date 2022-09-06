@@ -12,3 +12,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const generalEl = document.querySelector(".gallery");
+
+const imageEl = images.map(image => `<li><img class="gallery" src=${image.url} width = '400' height = '250' alt='${image.alt}'/> </li>`)
+  .join('')
+generalEl.insertAdjacentHTML('beforeend', imageEl)
+
+// generalEl.classList.add("new-class");
+
+
+// images.forEach(element => {
+//   generalEl.insertAdjacentHTML ('afterbegin',
+//  `<li> <img src = ${element.url} alt = ${element.alt}  width = "400" height = "250"/> </li>`,
+//   );
+// });
+// console.log (generalEl)
+
+
